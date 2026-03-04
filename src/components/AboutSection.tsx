@@ -1,32 +1,42 @@
-import { ShieldCheck } from "lucide-react";
+import { Cpu, ShieldCheck } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-24 bg-muted">
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+            <span className="text-xs font-mono text-primary font-semibold tracking-widest uppercase mb-3 block">
+              About
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-6">
               About Vonkam Technologies
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Vonkam Technologies uses automated data systems to track public property records and foreclosure filings. When relevant activity is detected, homeowners can receive notifications so they can stay informed and better understand their situation.
+              Vonkam Technologies develops automated systems that monitor public property and foreclosure records. Our platform detects relevant case activity and helps notify homeowners so they can stay informed about their situation.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Our goal is to help homeowners stay aware of important case activity related to their property.
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Our goal is to provide homeowners with awareness and information about their property cases through reliable, technology-driven monitoring.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Vonkam Technologies is a data monitoring platform that connects homeowners with timely information. Businesses and individuals can submit their information to receive case updates, property alerts, and relevant notifications via SMS.
+            <p className="text-xs text-muted-foreground italic border-l-2 border-primary/30 pl-4">
+              Vonkam Technologies does not provide legal advice and encourages homeowners to consult legal professionals regarding their situation.
             </p>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="bg-primary/5 rounded-2xl p-12 text-center border border-primary/10">
-              <ShieldCheck className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">Trusted Monitoring</h3>
-              <p className="text-sm text-muted-foreground max-w-xs mx-auto">
-                We use public data sources to keep you informed — no legal advice, just reliable information.
-              </p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-card border border-border rounded-2xl p-6 text-center glow-border">
+              <Cpu className="h-8 w-8 text-primary mx-auto mb-3" />
+              <h3 className="font-heading text-sm font-bold text-foreground mb-1">Automated Systems</h3>
+              <p className="text-xs text-muted-foreground">AI-powered scanning of public records databases</p>
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-6 text-center glow-border">
+              <ShieldCheck className="h-8 w-8 text-primary mx-auto mb-3" />
+              <h3 className="font-heading text-sm font-bold text-foreground mb-1">Trusted Data</h3>
+              <p className="text-xs text-muted-foreground">Built on official public record sources</p>
+            </div>
+            <div className="col-span-2 bg-card border border-border rounded-2xl p-6 text-center glow-border">
+              <div className="font-mono text-3xl font-bold text-primary mb-2">100%</div>
+              <p className="text-sm text-muted-foreground">Public data sources — transparent and reliable</p>
             </div>
           </div>
         </div>

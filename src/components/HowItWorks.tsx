@@ -1,54 +1,61 @@
-import { Search, Bell, FileText, Lightbulb } from "lucide-react";
+import { Radar, BellRing, FileSearch2, Lightbulb } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
-    title: "Monitor",
-    description: "Our system monitors public foreclosure and property case filings.",
+    icon: Radar,
+    num: "01",
+    title: "Continuous Scanning",
+    description: "Our system continuously scans public property records and foreclosure filings across jurisdictions.",
   },
   {
-    icon: Bell,
-    title: "Detect",
-    description: "When activity related to your property appears, our system detects it.",
+    icon: FileSearch2,
+    num: "02",
+    title: "Activity Detection",
+    description: "When a filing or update appears related to a property, our platform detects the activity automatically.",
   },
   {
-    icon: FileText,
-    title: "Notify",
-    description: "Homeowners can receive notifications and updates regarding their case.",
+    icon: BellRing,
+    num: "03",
+    title: "Smart Notifications",
+    description: "Homeowners who request updates can receive notifications so they stay aware of changes in their case.",
   },
   {
     icon: Lightbulb,
-    title: "Inform",
-    description: "We help explain potential options available to homeowners.",
+    num: "04",
+    title: "Informed Decisions",
+    description: "Our platform helps homeowners understand what the activity may mean and what options may exist.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-secondary">
+    <section id="how-it-works" className="py-24 bg-background">
       <div className="section-container">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-            How Our System Works
+        <div className="text-center mb-16">
+          <span className="text-xs font-mono text-primary font-semibold tracking-widest uppercase mb-3 block">
+            Technology
+          </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">
+            How Our Monitoring Technology Works
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A simple, transparent process to help you stay on top of your property case.
+            A transparent, automated system that keeps homeowners aware of property case activity in real time.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((step) => (
             <div
-              key={step.title}
-              className="bg-background rounded-xl p-8 text-center shadow-sm border border-border hover:shadow-md transition-shadow"
+              key={step.num}
+              className="relative bg-card rounded-2xl p-7 border border-border hover:border-primary/30 hover:shadow-lg transition-all group"
             >
-              <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center">
-                <step.icon className="h-7 w-7 text-primary" />
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <step.icon className="h-5 w-5 text-primary" />
+                </div>
+                <span className="font-mono text-xs text-muted-foreground tracking-wider">{step.num}</span>
               </div>
-              <span className="text-xs font-semibold text-primary uppercase tracking-wider mb-2 block">
-                Step {i + 1}
-              </span>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+              <h3 className="font-heading text-base font-bold text-foreground mb-2">{step.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
             </div>
           ))}
