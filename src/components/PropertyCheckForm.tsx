@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const PropertyCheckForm = () => {
   const [form, setForm] = useState({ fullName: "", propertyAddress: "", email: "", phone: "" });
@@ -10,7 +11,7 @@ const PropertyCheckForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!consent) {
       toast.error("You must agree to receive SMS notifications before submitting.");
@@ -21,12 +22,45 @@ const PropertyCheckForm = () => {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      toast.success("Your request has been submitted. We will reach out soon.");
+
+    try {
+      // Save to database
+      const { error: dbError } = await supabase
+        .from("property_inquiries")
+        .insert({
+          full_name: form.fullName,
+          property_address: form.propertyAddress,
+          email: form.email,
+          phone: form.phone,
+          sms_consent: consent,
+        });
+
+      if (dbError) {
+        console.error("Database error:", dbError);
+        toast.error("There was an error submitting your request. Please try again.");
+        setSubmitting(false);
+        return;
+      }
+
+      // Trigger double opt-in SMS
+      const { error: smsError } = await supabase.functions.invoke("send-sms", {
+        body: { to: form.phone, fullName: form.fullName },
+      });
+
+      if (smsError) {
+        console.error("SMS error:", smsError);
+        // Still show success since the inquiry was saved
+      }
+
+      toast.success("Your request has been submitted. You'll receive a confirmation SMS shortly.");
       setForm({ fullName: "", propertyAddress: "", email: "", phone: "" });
       setConsent(false);
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("There was an error submitting your request. Please try again.");
+    } finally {
       setSubmitting(false);
-    }, 1000);
+    }
   };
 
   const inputClasses = "w-full rounded-xl border border-input bg-background px-4 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/50 focus:border-primary transition-all";
