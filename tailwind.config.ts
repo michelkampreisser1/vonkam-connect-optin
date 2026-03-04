@@ -8,14 +8,12 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        heading: ["'Space Grotesk'", "sans-serif"],
-        body: ["'Inter'", "sans-serif"],
+        heading: ["'Playfair Display'", "serif"],
+        body: ["'DM Sans'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,9 +51,9 @@ export default {
         },
         hero: {
           DEFAULT: "hsl(var(--hero-bg))",
-          foreground: "hsl(var(--hero-foreground))",
-          muted: "hsl(var(--hero-muted))",
+          overlay: "hsl(var(--hero-overlay))",
         },
+        trust: "hsl(var(--trust))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -82,7 +80,7 @@ export default {
           to: { height: "0" },
         },
         "fade-in-up": {
-          from: { opacity: "0", transform: "translateY(20px)" },
+          from: { opacity: "0", transform: "translateY(24px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
       },
