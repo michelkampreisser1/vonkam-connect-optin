@@ -1,18 +1,18 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
-import ServicesSection from "@/components/ServicesSection";
+import PlatformFeatures from "@/components/PlatformFeatures";
 import AboutSection from "@/components/AboutSection";
 import PropertyCheckForm from "@/components/PropertyCheckForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       <HowItWorks />
-      <ServicesSection />
+      <PlatformFeatures />
       <AboutSection />
       <PropertyCheckForm />
       <Footer />
