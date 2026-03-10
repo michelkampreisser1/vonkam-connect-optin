@@ -129,10 +129,10 @@ const PropertyCheckForm = () => {
 
             <div className="space-y-2 pt-2">
               <p className="text-[11px] text-muted-foreground leading-relaxed text-center">
-                By submitting this form and providing your phone number, you agree to receive SMS notifications from Vonkam Technologies regarding your request or property case updates. Message frequency varies. Message and data rates may apply.
+                By submitting this form and providing your phone number, you agree to receive SMS notifications from Vonkam Technologies regarding your request or property case updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.
               </p>
               <p className="text-[11px] text-muted-foreground leading-relaxed text-center font-semibold">
-                No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
+                No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.
               </p>
             </div>
           </form>
