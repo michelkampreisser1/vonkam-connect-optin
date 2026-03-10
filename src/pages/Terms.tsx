@@ -30,7 +30,7 @@ const Terms = () => {
               <li><strong className="text-foreground">Reply STOP</strong> to any message to unsubscribe at any time.</li>
               <li><strong className="text-foreground">Reply HELP</strong> to any message for assistance.</li>
             </ul>
-            <p className="mt-3">Consent to receive SMS messages is not a condition of purchasing any goods or services.</p>
+            <p className="mt-3">Consent to receive SMS messages is not a condition of purchasing any goods or services. Text messaging originator opt-in data and consent will not be shared with any third parties.</p>
           </section>
 
           <section>

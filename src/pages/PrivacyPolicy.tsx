@@ -38,8 +38,11 @@ const PrivacyPolicy = () => {
 
           <section className="bg-card border border-primary/20 rounded-2xl p-6 glow-border">
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Third-Party Sharing — Mobile Information</h2>
-            <p className="font-medium text-foreground">
+            <p className="font-medium text-foreground mb-2">
               Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.
+            </p>
+            <p className="text-muted-foreground">
+              Consent to receive SMS messages is not a condition of purchasing any goods or services.
             </p>
           </section>
 
