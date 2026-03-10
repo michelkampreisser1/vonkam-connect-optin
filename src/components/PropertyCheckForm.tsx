@@ -103,7 +103,7 @@ const PropertyCheckForm = () => {
               </div>
             </div>
 
-            {/* SMS Consent */}
+            {/* SMS Consent — Required for Twilio A2P 10DLC compliance */}
             <div className="flex items-start gap-3 bg-muted rounded-xl p-4 border border-border">
               <input
                 id="smsConsent"
@@ -113,7 +113,9 @@ const PropertyCheckForm = () => {
                 className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
               />
               <label htmlFor="smsConsent" className="text-xs text-muted-foreground leading-relaxed">
-                I consent to receive SMS notifications from Vonkam Technologies regarding updates about my property inquiry or case activity. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for assistance.
+                I agree to receive SMS notifications from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry or case activity. Message frequency varies. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance. Consent is not a condition of purchase. View our{" "}
+                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Privacy Policy</a>{" "}and{" "}
+                <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Terms &amp; Conditions</a>.
               </label>
             </div>
 
