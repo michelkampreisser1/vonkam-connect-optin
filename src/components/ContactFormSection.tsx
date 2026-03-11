@@ -192,9 +192,7 @@ const ContactFormSection = () => {
                   className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
                 />
                 <label htmlFor="smsConsent" className="text-xs text-muted-foreground font-body leading-relaxed">
-                  I agree to receive SMS notifications from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry or case activity. Message frequency varies. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance. Consent is not a condition of purchase. View our{" "}
-                  <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Privacy Policy</a>{" "}and{" "}
-                  <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Terms &amp; Conditions</a>.
+                  I agree to receive SMS text messages from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry and case activity. Message frequency varies based on your case activity. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance.
                 </label>
               </div>
 
