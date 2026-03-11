@@ -1,16 +1,20 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SiteNavbar = () => {
   const [open, setOpen] = useState(false);
 
-  const links = [
+  const hashLinks = [
     { label: "How It Works", href: "#how-it-works" },
     { label: "Services", href: "#services" },
     { label: "FAQ", href: "#faq" },
     { label: "About", href: "#about" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms", href: "/terms" },
+  ];
+
+  const legalLinks = [
+    { label: "Privacy Policy", to: "/privacy-policy" },
+    { label: "Terms", to: "/terms" },
   ];
 
   return (
@@ -27,8 +31,8 @@ const SiteNavbar = () => {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
+        <nav className="hidden md:flex items-center gap-6">
+          {hashLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
@@ -36,6 +40,15 @@ const SiteNavbar = () => {
             >
               {l.label}
             </a>
+          ))}
+          {legalLinks.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              className="text-sm font-body font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </Link>
           ))}
           <a
             href="#get-help"
@@ -57,7 +70,7 @@ const SiteNavbar = () => {
       {open && (
         <div className="md:hidden bg-white border-b border-border">
           <nav className="section-container py-4 flex flex-col gap-3">
-            {links.map((l) => (
+            {hashLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -66,6 +79,16 @@ const SiteNavbar = () => {
               >
                 {l.label}
               </a>
+            ))}
+            {legalLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm text-muted-foreground hover:text-foreground"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
             ))}
             <a
               href="#get-help"
