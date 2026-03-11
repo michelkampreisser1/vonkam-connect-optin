@@ -192,9 +192,7 @@ const ContactFormSection = () => {
                   className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
                 />
                 <label htmlFor="smsConsent" className="text-xs text-muted-foreground font-body leading-relaxed">
-                  I agree to receive SMS notifications from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry or case activity. Message frequency varies. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance. Consent is not a condition of purchase. View our{" "}
-                  <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Privacy Policy</a>{" "}and{" "}
-                  <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Terms &amp; Conditions</a>.
+                  I agree to receive SMS text messages from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry and case activity. Message frequency varies based on your case activity. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance.
                 </label>
               </div>
 
@@ -221,10 +219,9 @@ const ContactFormSection = () => {
 
               <div className="space-y-2 pt-2">
                 <p className="text-[11px] text-muted-foreground font-body leading-relaxed text-center">
-                  By submitting this form and providing your phone number, you agree to receive SMS notifications from Vonkam Technologies regarding your request or property case updates. Message frequency varies. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase.
-                </p>
-                <p className="text-[11px] text-muted-foreground font-body leading-relaxed text-center font-semibold">
-                  No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.
+                  By submitting this form, you confirm that you are the property owner or authorized representative. By checking the SMS box above, you consent to receive text messages from Vonkam Technologies at the number provided. Consent is not a condition of receiving services. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. View our{" "}
+                  <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Privacy Policy</a>{" "}and{" "}
+                  <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Terms &amp; Conditions</a>.
                 </p>
               </div>
             </form>
