@@ -50,6 +50,7 @@ const ContactFormSection = () => {
     setSubmitting(true);
 
     try {
+      // Save to local database
       const { error: dbError } = await supabase
         .from("property_inquiries")
         .insert({
@@ -65,6 +66,28 @@ const ContactFormSection = () => {
         toast.error("There was an error submitting your request. Please try again.");
         setSubmitting(false);
         return;
+      }
+
+      // Send to external property leads endpoint
+      try {
+        await fetch("https://yupktcbwimoxltamtsnj.supabase.co/rest/v1/property_leads", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1cGt0Y2J3aW1veGx0YW10c25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjgwODEsImV4cCI6MjA4Mjk0NDA4MX0.QB8UPL14rxG2LgMdZAdI4iDKcsGGoKZfmjV_jDzHLxg",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1cGt0Y2J3aW1veGx0YW10c25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjgwODEsImV4cCI6MjA4Mjk0NDA4MX0.QB8UPL14rxG2LgMdZAdI4iDKcsGGoKZfmjV_jDzHLxg",
+            "Prefer": "return=minimal",
+          },
+          body: JSON.stringify({
+            full_name: form.fullName,
+            email: form.email,
+            phone: form.phone,
+            property_address: form.propertyAddress,
+            situation: urgency,
+          }),
+        });
+      } catch (extErr) {
+        console.error("External lead sync error:", extErr);
       }
 
       const { error: smsError } = await supabase.functions.invoke("send-sms", {
