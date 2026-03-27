@@ -185,6 +185,23 @@ const ContactFormSection = () => {
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5 font-body">Phone Number *</label>
                   <input id="phone" name="phone" type="tel" required value={form.phone} onChange={handleChange} className={inputClasses} placeholder="(305) 555-0123" />
+              </div>
+              </div>
+
+              {/* SMS Consent - directly below phone field */}
+              <div>
+                <p className="text-sm font-semibold text-foreground mb-2 font-body">SMS Consent</p>
+                <div className="flex items-start gap-3 bg-blue-50 rounded-xl p-4 border border-primary/20">
+                  <input
+                    id="smsConsent"
+                    type="checkbox"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
+                  />
+                  <label htmlFor="smsConsent" className="text-sm text-foreground font-body leading-relaxed">
+                    I agree to receive SMS messages from <strong>Vonkam Technologies</strong> regarding my property inquiry and updates. Message frequency may vary. Message &amp; data rates may apply. Reply <strong>STOP</strong> to unsubscribe and <strong>HELP</strong> for help.
+                  </label>
                 </div>
               </div>
 
@@ -203,20 +220,6 @@ const ContactFormSection = () => {
                   <option value="Evening">Evening</option>
                   <option value="Anytime">Anytime</option>
                 </select>
-              </div>
-
-              {/* SMS Consent */}
-              <div className="flex items-start gap-3 bg-blue-50 rounded-xl p-4 border border-primary/20">
-                <input
-                  id="smsConsent"
-                  type="checkbox"
-                  checked={consent}
-                  onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
-                />
-                <label htmlFor="smsConsent" className="text-xs text-muted-foreground font-body leading-relaxed">
-                  I agree to receive SMS text messages from <strong className="text-foreground">Vonkam Technologies</strong> regarding updates about my property inquiry and case activity. Message frequency varies based on your case activity. Message and data rates may apply. Reply <strong className="text-foreground">STOP</strong> to unsubscribe at any time. Reply <strong className="text-foreground">HELP</strong> for assistance.
-                </label>
               </div>
 
               <button
