@@ -39,10 +39,6 @@ const ContactFormSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!consent) {
-      toast.error("You must agree to receive SMS notifications before submitting.");
-      return;
-    }
     if (!form.fullName || !form.propertyAddress || !form.email || !form.phone) {
       toast.error("Please fill out all required fields.");
       return;
