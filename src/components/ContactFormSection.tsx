@@ -184,9 +184,9 @@ const ContactFormSection = () => {
               </div>
               </div>
 
-              {/* SMS Consent - optional, directly below phone field */}
+              {/* SMS Consent - directly below phone field */}
               <div>
-                <p className="text-sm font-semibold text-foreground mb-2 font-body">SMS Consent <span className="font-normal text-muted-foreground">(optional)</span></p>
+                <p className="text-sm font-bold text-foreground mb-2 font-body">SMS Consent <span className="font-normal text-muted-foreground">(optional)</span></p>
                 <div className="flex items-start gap-3 bg-blue-50 rounded-xl p-4 border border-primary/20">
                   <input
                     id="smsConsent"
@@ -195,10 +195,8 @@ const ContactFormSection = () => {
                     onChange={(e) => setConsent(e.target.checked)}
                     className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
                   />
-                  <label htmlFor="smsConsent" className="text-sm text-foreground font-body leading-relaxed">
-                    I agree to receive SMS messages from <strong>Vonkam Technologies</strong> regarding my property inquiry and updates. Message frequency may vary. Message and data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for assistance. Consent is not a condition of service. View our{" "}
-                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Privacy Policy</a>{" "}and{" "}
-                    <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Terms</a>{" "}for more information.
+                  <label htmlFor="smsConsent" className="text-base text-foreground font-body leading-relaxed">
+                    I agree to receive SMS messages from <strong>Vonkam Technologies</strong> regarding my property inquiry and updates. Message frequency may vary. Message &amp; data rates may apply. Reply <strong>STOP</strong> to unsubscribe and <strong>HELP</strong> for help.
                   </label>
                 </div>
               </div>
