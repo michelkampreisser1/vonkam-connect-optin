@@ -196,7 +196,7 @@ const ContactFormSection = () => {
                     className="mt-0.5 h-4 w-4 rounded border-input text-primary focus:ring-ring shrink-0"
                   />
                   <label htmlFor="smsConsent" className="text-base text-foreground font-body leading-relaxed">
-                    I agree to receive SMS messages from <strong>Vonkam Technologies</strong> regarding my property inquiry and updates. Message frequency may vary. Message &amp; data rates may apply. Reply <strong>STOP</strong> to unsubscribe and <strong>HELP</strong> for help.
+                    I agree to receive SMS messages from <strong>Vonkam Technologies</strong> regarding my property inquiry and updates. Message frequency may vary. Message &amp; data rates may apply. Reply <strong>STOP</strong> to unsubscribe and <strong>HELP</strong> for help. Consent is not a condition of service.
                   </label>
                 </div>
               </div>
