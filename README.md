@@ -1,73 +1,206 @@
-# Welcome to your Lovable project
+# PREFORCLOSURE.MIAMI
 
-## Project info
+Create a professional website structure for Vonkam Technologies that is fully compliant with Twilio A2P 10DLC messaging regulations.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The goal is to allow customers to submit their phone number and explicitly opt in to receive SMS messages related to influencer marketing campaigns, promotions, and updates.
 
-## How can I edit this code?
+Build the following pages and components:
 
-There are several ways of editing your application.
+1. Main Website
 
-**Use Lovable**
+Domain placeholder: https://vonkam.com
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Sections:
 
-Changes made via Lovable will be committed automatically to this repo.
+Hero section explaining Vonkam Technologies
 
-**Use your preferred IDE**
+Services: Influencer marketing campaigns and brand partnerships
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Contact section where users can submit their phone number
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. SMS Opt-In Contact Form (Critical for Twilio)
 
-Follow these steps:
+Create a form with these fields:
+
+Full Name
+
+Email
+
+Phone Number
+
+Company (optional)
+
+Include a required checkbox with this exact compliance language:
+
+"I consent to receive SMS notifications, alerts, and occasional marketing messages from Vonkam Technologies. Message frequency varies. Message and data rates may apply. Text HELP to get help. Text STOP to unsubscribe."
+
+The checkbox must not be pre-checked.
+
+Under the form add:
+
+"No mobile information will be shared with third parties or affiliates for marketing or promotional purposes."
+
+3. Privacy Policy Page
+
+URL:
+
+/privacy-policy
+
+Include:
+
+What data we collect
+
+How we use the information
+
+Phone number usage
+
+SMS consent usage
+
+Data protection
+
+Important clause:
+
+"Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes. All categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."
+
+4. Terms and Conditions Page
+
+URL:
+
+/terms
+
+Include an SMS Terms section explaining:
+
+By opting in, users agree to receive SMS messages from Vonkam Technologies
+
+Message frequency varies
+
+Message and data rates may apply
+
+Reply STOP to unsubscribe
+
+Reply HELP for help
+
+5. Footer Compliance Links
+
+Add a footer with links to:
+
+Privacy Policy
+
+Terms & Conditions
+
+Contact
+
+This is required for Twilio review.
+
+6. SMS Opt-In Disclosure (Important)
+
+On the page where users enter their phone number include this disclosure clearly:
+
+"By submitting this form and signing up for texts, you consent to receive text messages from Vonkam Technologies at the number provided, including messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel."
+
+7. Business Information Section
+
+Include a section that describes the business:
+
+Vonkam Technologies is a marketing and influencer campaign platform that connects brands with university influencers. Businesses can submit their information to receive campaign updates, onboarding instructions, and campaign notifications via SMS.
+
+8. Clean Simple Design
+
+Design style:
+
+modern startup
+
+minimal
+
+black / white / orange accents
+
+professional SaaS look
+
+9. Export Requirement
+
+Output should include:
+
+homepage
+
+contact page with SMS opt-in
+
+privacy policy page
+
+terms and conditions page
+
+footer with compliance links
+
+Information you will send back to the Twilio reviewer
+
+Once Lovable builds the site, you will reply with something like:
+
+Website URL
+
+https://vonkam.com
+
+Opt-in page
+
+https://vonkam.com/contact
+
+Privacy Policy
+
+https://vonkam.com/privacy-policy
+
+Terms
+
+https://vonkam.com/terms
+
+Opt-in method
+
+Users enter their phone number through the contact form and must check a consent box agreeing to receive SMS messages from Vonkam Technologies.
+
+Important (This is why Twilio rejects most campaigns)
+
+Make sure the site shows:
+
+✔ phone number form
+✔ consent checkbox
+✔ privacy policy
+✔ terms page
+✔ SMS language
+
+Without these Twilio auto-rejects.
+
+💡 One more thing I strongly recommend for your setup (since you’re building automation with Supabase + Make):
+
+Add double opt-in SMS confirmation.
+
+Example:
+
+User submits phone number
+
+They receive:
+
+Vonkam Technologies: Reply YES to confirm you want to receive SMS updates from us. Reply STOP to cancel.
+
+Only send messages after YES.
+
+This dramatically increases Twilio approval rate.
+
+This project was built with [Lovable](https://lovable.dev).
+
+**Live app**: https://vonkam-connect-optin.lovable.app
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f24d974e-9406-4566-9d19-9fd88035300b).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
