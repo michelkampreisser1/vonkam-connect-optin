@@ -86,16 +86,22 @@ const ContactFormSection = () => {
         console.error("External lead sync error:", extErr);
       }
 
-      const { error: smsError } = await supabase.functions.invoke("send-sms", {
-        body: { to: form.phone, fullName: form.fullName },
-      });
+      if (consent) {
+        const { error: smsError } = await supabase.functions.invoke("send-sms", {
+          body: { to: form.phone, fullName: form.fullName },
+        });
 
-      if (smsError) {
-        console.error("SMS error:", smsError);
+        if (smsError) {
+          console.error("SMS error:", smsError);
+        }
       }
 
       setSubmitted(true);
-      toast.success("Your request has been submitted. You'll receive a confirmation SMS shortly.");
+      toast.success(
+        consent
+          ? "Your request has been submitted. You'll receive a confirmation SMS shortly."
+          : "Your request has been submitted. We will review your property and follow up."
+      );
       setForm({ fullName: "", propertyAddress: "", email: "", phone: "", bestTime: "" });
       setConsent(false);
       setUrgency("");
