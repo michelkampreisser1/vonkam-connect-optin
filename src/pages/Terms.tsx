@@ -14,34 +14,34 @@ const Terms = () => {
         <div className="space-y-8 text-muted-foreground text-sm leading-relaxed font-body">
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Acceptance of Terms</h2>
-            <p>By accessing or using the Vonkam Technologies website and services, you agree to be bound by these Terms &amp; Conditions.</p>
+            <p>By accessing or using the Vonkam Technologies LLC website and services, you agree to be bound by these Terms &amp; Conditions.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Services Description</h2>
-            <p>Vonkam Technologies provides property case monitoring and advisory services for homeowners in Miami-Dade and Broward County, Florida. We monitor public foreclosure and property records and provide informational advisory services.</p>
+            <p>Vonkam Technologies LLC provides property case monitoring and advisory services for homeowners in Miami-Dade and Broward County, Florida. We monitor public foreclosure and property records and provide informational advisory services.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Not Legal Advice</h2>
-            <p>Vonkam Technologies is not a law firm. Nothing on this website or in our communications constitutes legal advice. We strongly recommend consulting a licensed Florida attorney for advice specific to your legal situation.</p>
+            <p>Vonkam Technologies LLC is not a law firm. Nothing on this website or in our communications constitutes legal advice. We strongly recommend consulting a licensed Florida attorney for advice specific to your legal situation.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Not a Real Estate Brokerage</h2>
-            <p>Vonkam Technologies is not a licensed real estate brokerage. Our advisory services are informational in nature.</p>
+            <p>Vonkam Technologies LLC is not a licensed real estate brokerage. Our advisory services are informational in nature.</p>
           </section>
 
           <section className="bg-card border border-primary/20 rounded-2xl p-6">
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">SMS Terms</h2>
             <p>
-              By consenting to SMS communications, you agree to receive text messages from Vonkam Technologies regarding your property inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for assistance. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
+              By consenting to SMS communications, you agree to receive text messages from Vonkam Technologies LLC regarding your property inquiry. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for assistance. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Limitation of Liability</h2>
-            <p>Vonkam Technologies shall not be liable for any damages arising from your use of our services or reliance on information provided through our platform.</p>
+            <p>Vonkam Technologies LLC shall not be liable for any damages arising from your use of our services or reliance on information provided through our platform.</p>
           </section>
 
           <section>
@@ -51,7 +51,7 @@ const Terms = () => {
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Contact</h2>
-            <p>Vonkam Technologies LLC<br />Miami-Dade County, Florida<br />Email: legal@vonkam.com</p>
+            <p>Vonkam Technologies LLC<br />90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />Email: michelkam1@hotmail.com</p>
           </section>
         </div>
       </main>

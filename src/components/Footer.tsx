@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
                 <Activity className="h-3.5 w-3.5 text-primary-foreground" />
               </div>
-              <span className="font-heading text-base font-bold text-hero-foreground">Vonkam Technologies</span>
+              <span className="font-heading text-base font-bold text-hero-foreground">Vonkam Technologies LLC</span>
             </div>
             <p className="text-sm text-hero-muted leading-relaxed">
               Automated monitoring of public property records and foreclosure filings to help homeowners stay informed.
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-hero-foreground/10 mt-10 pt-6 text-center text-xs text-hero-muted">
-          &copy; {new Date().getFullYear()} Vonkam Technologies. All rights reserved.
+          &copy; {new Date().getFullYear()} Vonkam Technologies LLC. All rights reserved.
         </div>
       </div>
     </footer>

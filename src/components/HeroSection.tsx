@@ -18,7 +18,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-hero-muted leading-relaxed mb-10 max-w-2xl">
-            Vonkam Technologies uses automated data monitoring systems to track public foreclosure and property records and notify homeowners when important case activity occurs.
+            Vonkam Technologies LLC uses automated data monitoring systems to track public foreclosure and property records and notify homeowners when important case activity occurs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

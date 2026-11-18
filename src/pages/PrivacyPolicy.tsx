@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
           <section className="bg-card border border-primary/20 rounded-2xl p-6">
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">SMS Communications</h2>
             <p className="mb-3">
-              If you consent to SMS communications, you will receive text messages from Vonkam Technologies related to your property inquiry and case activity. Message frequency varies. Message and data rates may apply. You can opt out at any time by replying STOP. Reply HELP for assistance.
+              If you consent to SMS communications, you will receive text messages from Vonkam Technologies LLC related to your property inquiry and case activity. Message frequency varies. Message and data rates may apply. You can opt out at any time by replying STOP. Reply HELP for assistance.
             </p>
             <p className="font-semibold text-foreground">
               No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. This includes no sharing for marketing or promotional purposes.
@@ -48,12 +48,12 @@ const PrivacyPolicy = () => {
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Your Rights</h2>
-            <p>You may request access to, correction of, or deletion of your personal information by contacting us at privacy@vonkam.com.</p>
+            <p>You may request access to, correction of, or deletion of your personal information by contacting us at michelkam1@hotmail.com.</p>
           </section>
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Contact</h2>
-            <p>Vonkam Technologies LLC<br />Miami-Dade County, Florida<br />Email: privacy@vonkam.com</p>
+            <p>Vonkam Technologies LLC<br />90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />Email: michelkam1@hotmail.com</p>
           </section>
         </div>
       </main>

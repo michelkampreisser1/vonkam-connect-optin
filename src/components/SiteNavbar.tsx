@@ -27,7 +27,7 @@ const SiteNavbar = () => {
             </svg>
           </div>
           <span className="font-heading text-xl font-bold text-foreground tracking-tight">
-            Vonkam
+            Vonkam Technologies LLC
           </span>
         </a>
 

@@ -11,10 +11,14 @@ const SiteFooter = () => (
                 <polyline points="2 12 6 8 10 14 14 6 18 16 22 12" />
               </svg>
             </div>
-            <span className="font-heading text-base font-bold text-white">Vonkam Technologies</span>
+            <span className="font-heading text-base font-bold text-white">Vonkam Technologies LLC</span>
           </div>
           <p className="text-sm font-body leading-relaxed">
             Automated monitoring of public property records and foreclosure filings to help homeowners stay informed.
+          </p>
+          <p className="text-sm font-body leading-relaxed mt-4">
+            90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />
+            <a href="mailto:michelkam1@hotmail.com" className="hover:text-white underline">michelkam1@hotmail.com</a>
           </p>
         </div>
 
@@ -40,7 +44,7 @@ const SiteFooter = () => (
 
       <div className="border-t border-gray-700 pt-8">
         <p className="text-xs font-body leading-relaxed text-center text-gray-500">
-          © {new Date().getFullYear()} Vonkam Technologies LLC. Serving Miami-Dade and Broward County, Florida. Vonkam Technologies is a property monitoring and advisory service. We are not a law firm and do not provide legal advice. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
+          © {new Date().getFullYear()} Vonkam Technologies LLC. Serving Miami-Dade and Broward County, Florida. Vonkam Technologies LLC is a property monitoring and advisory service. Vonkam Technologies LLC is not a law firm and does not provide legal advice. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
         </p>
       </div>
     </div>

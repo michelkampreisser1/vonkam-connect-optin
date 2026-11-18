@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     q: "Will I owe money after a short sale?",
-    a: "Florida law prohibits deficiency judgments on owner-occupied primary residences in most short sales. Vonkam advisors specifically negotiate deficiency waivers as part of the short sale approval process — meaning the remaining loan balance is forgiven.",
+    a: "Florida law prohibits deficiency judgments on owner-occupied primary residences in most short sales. Whether a deficiency is waived depends on your lender and situation; consult a licensed Florida attorney for advice on your case.",
   },
   {
     q: "How is Vonkam different from a regular real estate agent?",
-    a: "Traditional agents focus on listings and commissions. Vonkam specializes exclusively in distressed property situations. We understand loss mitigation departments, court timelines, and lender negotiations in a way general agents do not.",
+    a: "Traditional agents focus on listings and commissions. Vonkam specializes exclusively in distressed property situations. We focus on monitoring public records and helping you understand court timelines and possible options.",
   },
   {
     q: "Do I need to hire an attorney to use your service?",

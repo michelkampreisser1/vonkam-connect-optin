@@ -5,7 +5,6 @@ import StatsBar from "@/components/StatsBar";
 import SituationTriage from "@/components/SituationTriage";
 import HowItWorksNew from "@/components/HowItWorksNew";
 import ServicesSection from "@/components/ServicesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import ContactFormSection from "@/components/ContactFormSection";
 import CtaStrip from "@/components/CtaStrip";
@@ -22,7 +21,6 @@ const Index = () => {
       <SituationTriage />
       <HowItWorksNew />
       <ServicesSection />
-      <TestimonialsSection />
       <FAQSection />
       <ContactFormSection />
       <CtaStrip />

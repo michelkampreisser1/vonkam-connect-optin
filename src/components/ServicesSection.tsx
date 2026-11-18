@@ -5,7 +5,6 @@ const checklist = [
   "Deficiency waiver pursuit",
   "Credit impact minimization",
   "Relocation assistance coordination",
-  "Avg 60-90 day resolution",
 ];
 
 const smallCards = [
@@ -36,7 +35,7 @@ const ServicesSection = () => (
             </span>
             <h3 className="font-heading text-2xl font-bold mb-4">Short Sale Advisory</h3>
             <p className="text-gray-300 font-body leading-relaxed">
-              A short sale lets you sell your home for less than the mortgage balance — with the lender's approval. We work directly with the loss mitigation department to negotiate terms, pursue deficiency waivers, and minimize credit damage.
+              A short sale lets you sell your home for less than the mortgage balance — with the lender's approval. We can help you understand the process and the options that may be available to you.
             </p>
           </div>
           <div>

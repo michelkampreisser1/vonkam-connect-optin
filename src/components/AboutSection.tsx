@@ -10,16 +10,16 @@ const AboutSection = () => {
               About
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-6">
-              About Vonkam Technologies
+              About Vonkam Technologies LLC
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Vonkam Technologies develops automated systems that monitor public property and foreclosure records. Our platform detects relevant case activity and helps notify homeowners so they can stay informed about their situation.
+              Vonkam Technologies LLC develops automated systems that monitor public property and foreclosure records. Our platform detects relevant case activity and helps notify homeowners so they can stay informed about their situation.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               Our goal is to provide homeowners with awareness and information about their property cases through reliable, technology-driven monitoring.
             </p>
             <p className="text-xs text-muted-foreground italic border-l-2 border-primary/30 pl-4">
-              Vonkam Technologies does not provide legal advice and encourages homeowners to consult legal professionals regarding their situation.
+              Vonkam Technologies LLC does not provide legal advice and encourages homeowners to consult legal professionals regarding their situation.
             </p>
           </div>
 
@@ -35,8 +35,7 @@ const AboutSection = () => {
               <p className="text-xs text-muted-foreground">Built on official public record sources</p>
             </div>
             <div className="col-span-2 bg-card border border-border rounded-2xl p-6 text-center glow-border">
-              <div className="font-mono text-3xl font-bold text-primary mb-2">100%</div>
-              <p className="text-sm text-muted-foreground">Public data sources — transparent and reliable</p>
+              <p className="text-sm text-muted-foreground">90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br /><a href="mailto:michelkam1@hotmail.com" className="text-primary underline">michelkam1@hotmail.com</a></p>
             </div>
           </div>
         </div>
