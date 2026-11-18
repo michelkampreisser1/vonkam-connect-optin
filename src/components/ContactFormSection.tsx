@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 import { Check } from "lucide-react";
+
+const LEADS_API = "https://www.vonkam.technology/api/website-leads";
 
 const urgencyOptions = [
   { emoji: "🚨", label: "Auction Date Set" },
@@ -32,6 +33,23 @@ const ContactFormSection = () => {
   const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [token, setToken] = useState<string | null>(null);
+  const honeypot = useRef<HTMLInputElement>(null);
+
+  // Signed form token, issued once when the form mounts. The server refuses a
+  // submit with no token or one sent too fast, which keeps simple bots out.
+  useEffect(() => {
+    let alive = true;
+    fetch(LEADS_API)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (alive && d?.token) setToken(d.token);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -46,62 +64,44 @@ const ContactFormSection = () => {
     setSubmitting(true);
 
     try {
-      // Save to local database
-      const { error: dbError } = await supabase
-        .from("property_inquiries")
-        .insert({
-          full_name: form.fullName,
-          property_address: form.propertyAddress,
+      let activeToken = token;
+      if (!activeToken) {
+        const t = await fetch(LEADS_API).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+        activeToken = t?.token ?? null;
+      }
+
+      const res = await fetch(LEADS_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          token: activeToken,
+          website: honeypot.current?.value ?? "",
+          name: form.fullName,
+          address: form.propertyAddress,
           email: form.email,
           phone: form.phone,
+          situation: urgency,
+          best_time: form.bestTime,
           sms_consent: consent,
-        });
+          referrer: document.referrer || null,
+        }),
+      });
+      const result = await res.json().catch(() => ({ ok: false }));
 
-      if (dbError) {
-        console.error("Database error:", dbError);
-        toast.error("There was an error submitting your request. Please try again.");
+      if (!res.ok || !result.ok) {
+        const msg =
+          result.error === "phone"
+            ? "Please enter a valid US phone number."
+            : result.error === "too_fast"
+              ? "Please wait a moment and try again."
+              : "There was an error submitting your request. Please try again.";
+        toast.error(msg);
         setSubmitting(false);
         return;
       }
 
-      // Send to external property leads endpoint
-      try {
-        await fetch("https://yupktcbwimoxltamtsnj.supabase.co/rest/v1/property_leads", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1cGt0Y2J3aW1veGx0YW10c25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjgwODEsImV4cCI6MjA4Mjk0NDA4MX0.QB8UPL14rxG2LgMdZAdI4iDKcsGGoKZfmjV_jDzHLxg",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl1cGt0Y2J3aW1veGx0YW10c25qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjgwODEsImV4cCI6MjA4Mjk0NDA4MX0.QB8UPL14rxG2LgMdZAdI4iDKcsGGoKZfmjV_jDzHLxg",
-            "Prefer": "return=minimal",
-          },
-          body: JSON.stringify({
-            full_name: form.fullName,
-            email: form.email,
-            phone: form.phone,
-            property_address: form.propertyAddress,
-            situation: urgency,
-          }),
-        });
-      } catch (extErr) {
-        console.error("External lead sync error:", extErr);
-      }
-
-      if (consent) {
-        const { error: smsError } = await supabase.functions.invoke("send-sms", {
-          body: { to: form.phone, fullName: form.fullName },
-        });
-
-        if (smsError) {
-          console.error("SMS error:", smsError);
-        }
-      }
-
       setSubmitted(true);
-      toast.success(
-        consent
-          ? "Your request has been submitted. You'll receive a confirmation SMS shortly."
-          : "Your request has been submitted. We will review your property and follow up."
-      );
+      toast.success("Your request has been submitted. We will review your property and follow up.");
       setForm({ fullName: "", propertyAddress: "", email: "", phone: "", bestTime: "" });
       setConsent(false);
       setUrgency("");
@@ -151,6 +151,16 @@ const ContactFormSection = () => {
               Check My Property Status
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Honeypot: invisible to people, bots fill it. */}
+              <input
+                ref={honeypot}
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
               {/* Urgency Selector */}
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2 font-body">
