@@ -51,7 +51,7 @@ const Terms = () => {
 
           <section>
             <h2 className="text-lg font-heading font-bold text-foreground mb-3">Contact</h2>
-            <p>Vonkam Technologies LLC<br />90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />Email: michelkam1@hotmail.com</p>
+            <p>Vonkam Technologies LLC<br />90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />Email: michel@vonkam.com</p>
           </section>
         </div>
       </main>

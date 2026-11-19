@@ -2,7 +2,7 @@ const steps = [
   { num: "1", title: "Submit Your Property", desc: "Enter your address and basic info through our secure form." },
   { num: "2", title: "We Scan Public Records", desc: "Our system searches court filings, lis pendens, and public databases." },
   { num: "3", title: "You Get a Case Report", desc: "We send you a clear summary of where things stand — no jargon." },
-  { num: "4", title: "We Help Execute a Plan", desc: "Our advisors connect you with the right path: short sale, loan mod, or other options." },
+  { num: "4", title: "You Choose Your Path", desc: "Sell to us, work with a licensed professional we introduce, or do nothing. You decide, and there is no obligation." },
 ];
 
 const HowItWorksNew = () => (
