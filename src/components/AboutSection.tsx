@@ -35,7 +35,7 @@ const AboutSection = () => {
               <p className="text-xs text-muted-foreground">Built on official public record sources</p>
             </div>
             <div className="col-span-2 bg-card border border-border rounded-2xl p-6 text-center glow-border">
-              <p className="text-sm text-muted-foreground">90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br /><a href="mailto:michelkam1@hotmail.com" className="text-primary underline">michelkam1@hotmail.com</a></p>
+              <p className="text-sm text-muted-foreground">90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br /><a href="mailto:michel@vonkam.com" className="text-primary underline">michel@vonkam.com</a></p>
             </div>
           </div>
         </div>

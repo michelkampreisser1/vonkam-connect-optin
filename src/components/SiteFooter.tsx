@@ -14,11 +14,12 @@ const SiteFooter = () => (
             <span className="font-heading text-base font-bold text-white">Vonkam Technologies LLC</span>
           </div>
           <p className="text-sm font-body leading-relaxed">
-            Automated monitoring of public property records and foreclosure filings to help homeowners stay informed.
+            Foreclosure options and property solutions for homeowners in Miami-Dade and Broward.
           </p>
           <p className="text-sm font-body leading-relaxed mt-4">
             90 Southwest 3rd Street, Suite 4103, Miami, FL 33130<br />
-            <a href="mailto:michelkam1@hotmail.com" className="hover:text-white underline">michelkam1@hotmail.com</a>
+            <a href="tel:+13053072914" className="hover:text-white underline">(305) 307-2914</a><br />
+            <a href="mailto:michel@vonkam.com" className="hover:text-white underline">michel@vonkam.com</a>
           </p>
         </div>
 
@@ -44,7 +45,7 @@ const SiteFooter = () => (
 
       <div className="border-t border-gray-700 pt-8">
         <p className="text-xs font-body leading-relaxed text-center text-gray-500">
-          © {new Date().getFullYear()} Vonkam Technologies LLC. Serving Miami-Dade and Broward County, Florida. Vonkam Technologies LLC is a property monitoring and advisory service. Vonkam Technologies LLC is not a law firm and does not provide legal advice. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
+          © {new Date().getFullYear()} Vonkam Technologies LLC. Serving Miami-Dade and Broward County, Florida. Vonkam Technologies LLC monitors public property records, buys properties directly, and introduces homeowners to licensed professionals. Vonkam is not a law firm, a lender, or a financial advisor and does not provide legal or financial advice. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.
         </p>
       </div>
     </div>

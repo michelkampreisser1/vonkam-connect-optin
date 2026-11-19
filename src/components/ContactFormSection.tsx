@@ -141,7 +141,8 @@ const ContactFormSection = () => {
             <div className="mt-8 text-sm text-foreground font-body leading-relaxed">
               <p className="font-semibold">Vonkam Technologies LLC</p>
               <p>90 Southwest 3rd Street, Suite 4103, Miami, FL 33130</p>
-              <a href="mailto:michelkam1@hotmail.com" className="text-primary underline">michelkam1@hotmail.com</a>
+              <a href="tel:+13053072914" className="text-primary underline">(305) 307-2914</a><br />
+              <a href="mailto:michel@vonkam.com" className="text-primary underline">michel@vonkam.com</a>
             </div>
           </div>
 

@@ -1,10 +1,10 @@
 import { Check } from "lucide-react";
 
 const checklist = [
-  "Lender negotiation on your behalf",
-  "Deficiency waiver pursuit",
-  "Credit impact minimization",
-  "Relocation assistance coordination",
+  "A plain-language explanation of where your case stands",
+  "A direct offer to buy your property, if selling makes sense",
+  "Introductions to licensed attorneys, HUD-approved counselors and lenders",
+  "Everything in writing, with no upfront fees",
 ];
 
 const smallCards = [
@@ -19,10 +19,10 @@ const ServicesSection = () => (
     <div className="section-container">
       <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-          We Don't Just Monitor — We Help You Resolve.
+          We Don't Just Monitor — We Help You Move Forward.
         </h2>
         <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-          From detection to resolution, Vonkam provides end-to-end support for homeowners facing foreclosure.
+          From detection to resolution, Vonkam coordinates the next step with you, from first call to closing, working with licensed professionals where the law requires one.
         </p>
       </div>
 
@@ -33,9 +33,9 @@ const ServicesSection = () => (
             <span className="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">
               Most Requested
             </span>
-            <h3 className="font-heading text-2xl font-bold mb-4">Short Sale Advisory</h3>
+            <h3 className="font-heading text-2xl font-bold mb-4">Your Options, Explained</h3>
             <p className="text-gray-300 font-body leading-relaxed">
-              A short sale lets you sell your home for less than the mortgage balance — with the lender's approval. We can help you understand the process and the options that may be available to you.
+              Foreclosure has more than one way out: selling, a short sale approved by your lender, a deed-in-lieu, or fighting the case with an attorney. We explain each one and tell you honestly which fit your situation.
             </p>
           </div>
           <div>

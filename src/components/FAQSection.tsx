@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     q: "Is it too late if I already have an auction date?",
-    a: "Not always — but you must act immediately. In Florida, a short sale or deed-in-lieu can potentially delay or cancel a sale if the lender agrees before the auction occurs. We've seen cases resolved with as little as 10 days remaining.",
+    a: "Not always — but you must act immediately. In Florida, a short sale or deed-in-lieu can potentially delay or cancel a sale if the lender agrees before the auction occurs.",
   },
   {
     q: "What does a short sale mean for my credit?",
@@ -17,6 +17,10 @@ const faqs = [
   {
     q: "Will I owe money after a short sale?",
     a: "Florida law prohibits deficiency judgments on owner-occupied primary residences in most short sales. Whether a deficiency is waived depends on your lender and situation; consult a licensed Florida attorney for advice on your case.",
+  },
+  {
+    q: "Who is Vonkam, and how do you get paid?",
+    a: "Vonkam Technologies LLC is a Miami company at 90 SW 3rd Street. If you sell your property to us, we pay you and you pay us nothing. If we introduce you to a licensed attorney, counselor or lender, any fee is set by that professional and shown to you in writing before you agree. If Vonkam would receive compensation for an introduction, we tell you first. We never ask for money up front.",
   },
   {
     q: "How is Vonkam different from a regular real estate agent?",

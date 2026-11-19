@@ -12,14 +12,14 @@ const HeroSectionNew = () => (
         {/* Left */}
         <div>
           <span className="inline-block bg-destructive/20 text-red-400 text-xs font-semibold font-body px-3 py-1 rounded-full mb-6 border border-red-500/30">
-            Urgent Homeowner Advisory
+            Foreclosure Options &amp; Property Solutions
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-heading font-bold leading-tight mb-6">
             You Have More Options Than You Think.{" "}
             <span className="text-primary">We'll Help You See Them.</span>
           </h1>
           <p className="text-lg text-gray-300 font-body leading-relaxed mb-8 max-w-xl">
-            Vonkam monitors public property records and foreclosure filings across South Florida. When we detect a case tied to your property, we reach out — not to sell you something, but to show you what options you may still have.
+            Vonkam monitors public property records and foreclosure filings across South Florida. When we see a case tied to your property, we reach out to explain where it stands and what your options are. If selling is the right move, we can make you a direct offer. If it isn't, we introduce you to licensed professionals. No obligation, and everything in writing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <a
