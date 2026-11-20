@@ -1,3 +1,30 @@
 {
+  "redirects": [
+    {
+      "source": "/tech-apply",
+      "destination": "https://vonkamhomeservices.com/tech-apply",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "https://vonkamhomeservices.com/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/sms",
+      "destination": "https://vonkamhomeservices.com/sms",
+      "permanent": true
+    },
+    {
+      "source": "/crm",
+      "destination": "https://vonkamhomeservices.com/crm",
+      "permanent": true
+    },
+    {
+      "source": "/crm/:path*",
+      "destination": "https://vonkamhomeservices.com/crm/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
